@@ -26,11 +26,11 @@ describe(`TicTacToe`, () => {
             ticTacToe.setO(4)
             expect(ticTacToe._playground[4]).toBe(`o`)
         })
-        it(`should not override after a value that has already been set (setX as second call)`, () => {
+        it(`should not override a value that has already been set (setX as second call)`, () => {
             ticTacToe.setO(3).setX(3)
             expect(ticTacToe._playground[3]).toBe(`o`)
         })
-        it(`should not override after a value that has already been set (setO as second call)`, () => {
+        it(`should not override a value that has already been set (setO as second call)`, () => {
             ticTacToe.setX(6).setO(6)
             expect(ticTacToe._playground[6]).toBe(`x`)
         })
