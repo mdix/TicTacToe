@@ -13,8 +13,10 @@ describe(`TicTacToe`, () => {
     })
     describe(`should have setX and setO methods that`, () => {
         it(`should be chainable`, () => {
-            ticTacToe.setX(2).setO(2).setX(2)
-            expect(ticTacToe.constructor).toBe(TicTacToe)
+            let setXReturn = ticTacToe.setX(2)
+            let setOReturn = ticTacToe.setO(2)
+            expect(setOReturn).toBe(ticTacToe)
+            expect(setXReturn).toBe(ticTacToe)
         })
         it(`should set a field to 'x' at a certain position`, () => {
             ticTacToe.setX(2)
